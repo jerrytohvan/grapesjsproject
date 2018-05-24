@@ -1,0 +1,77 @@
+{
+  "_from": "grapesjs-blocks-flexbox",
+  "_id": "grapesjs-blocks-flexbox@0.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-TteRG7r14+j03kagaN/75l6r04Qd3YRBKCB8x1SZC4eH8L3BW29xXef9Svk7SD2j6/DPsketC2131xgpDv5dsQ==",
+  "_location": "/grapesjs-blocks-flexbox",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "grapesjs-blocks-flexbox",
+    "name": "grapesjs-blocks-flexbox",
+    "escapedName": "grapesjs-blocks-flexbox",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/grapesjs-blocks-flexbox/-/grapesjs-blocks-flexbox-0.1.1.tgz",
+  "_shasum": "d973abe40319bfbdfcab5351a335ac3494f52772",
+  "_spec": "grapesjs-blocks-flexbox",
+  "_where": "/Users/intern-01/grape-js-trial/grapeproject",
+  "author": {
+    "name": "Artur Arseniev"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/artf/grapesjs-blocks-flexbox/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Add the flexbox block",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.1.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "homepage": "https://github.com/artf/grapesjs-blocks-flexbox#readme",
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "flexbox",
+    "wysiwyg"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/grapesjs-blocks-flexbox.min.js",
+  "name": "grapesjs-blocks-flexbox",
+  "peerDependencies": {
+    "grapesjs": "0.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artf/grapesjs-blocks-flexbox.git"
+  },
+  "scripts": {
+    "build": "npm run v:patch && webpack --env.production",
+    "lint": "eslint src",
+    "start": "webpack-dev-server --open --progress --colors",
+    "v:patch": "npm version --no-git-tag-version patch"
+  },
+  "version": "0.1.1"
+}

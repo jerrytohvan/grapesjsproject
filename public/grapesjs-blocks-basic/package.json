@@ -1,0 +1,78 @@
+{
+  "_from": "grapesjs-blocks-basic",
+  "_id": "grapesjs-blocks-basic@0.1.7",
+  "_inBundle": false,
+  "_integrity": "sha512-DK+wmxlX5hC+sp/zfAyMdiaMHgXSx5p8Ove3T/wmA3ZtjOk0eNkaxcr1JUb+aY1w7hxkAmMdx/dCw9WdPkpFkg==",
+  "_location": "/grapesjs-blocks-basic",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "grapesjs-blocks-basic",
+    "name": "grapesjs-blocks-basic",
+    "escapedName": "grapesjs-blocks-basic",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/",
+    "/grapesjs-preset-webpage"
+  ],
+  "_resolved": "https://registry.npmjs.org/grapesjs-blocks-basic/-/grapesjs-blocks-basic-0.1.7.tgz",
+  "_shasum": "1c6b0c8134d159ff6b1091c0589a69fda0d77711",
+  "_spec": "grapesjs-blocks-basic",
+  "_where": "/Users/intern-01/grape-js-trial/grapeproject",
+  "author": {
+    "name": "Artur Arseniev"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/artf/grapesjs-blocks-basic/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Basic blocks for the GrapesJS editor",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.1.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "homepage": "https://github.com/artf/grapesjs-blocks-basic#readme",
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "blocks",
+    "basic"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/grapesjs-blocks-basic.min.js",
+  "name": "grapesjs-blocks-basic",
+  "peerDependencies": {
+    "grapesjs": "0.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artf/grapesjs-blocks-basic.git"
+  },
+  "scripts": {
+    "build": "npm run v:patch && webpack --env.production",
+    "lint": "eslint src",
+    "start": "webpack-dev-server --open --progress --colors",
+    "v:patch": "npm version --no-git-tag-version patch"
+  },
+  "version": "0.1.7"
+}

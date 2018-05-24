@@ -1,0 +1,78 @@
+{
+  "_from": "grapesjs-lory-slider",
+  "_id": "grapesjs-lory-slider@0.1.5",
+  "_inBundle": false,
+  "_integrity": "sha512-l5GYJtptAJXt5y3hOO9Boj1q+t1hOtSb3ODc0n0v8KycLE54tjh1XFrohmoj44wI36AyjH9W14tKx7iT5L7wDg==",
+  "_location": "/grapesjs-lory-slider",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "grapesjs-lory-slider",
+    "name": "grapesjs-lory-slider",
+    "escapedName": "grapesjs-lory-slider",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/grapesjs-lory-slider/-/grapesjs-lory-slider-0.1.5.tgz",
+  "_shasum": "9dbd42a0d2b10b8d848b9d74275c74e807853549",
+  "_spec": "grapesjs-lory-slider",
+  "_where": "/Users/intern-01/grape-js-trial/grapeproject",
+  "author": {
+    "name": "Artur Arseniev"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/artf/grapesjs-lory-slider/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "GrapesJS Slider Component",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.1.1",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "homepage": "https://github.com/artf/grapesjs-lory-slider#readme",
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "slider",
+    "lory",
+    "wysiwyg"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "dist/grapesjs-lory-slider.min.js",
+  "name": "grapesjs-lory-slider",
+  "peerDependencies": {
+    "grapesjs": "0.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artf/grapesjs-lory-slider.git"
+  },
+  "scripts": {
+    "build": "npm run v:patch && webpack --env.production",
+    "lint": "eslint src",
+    "start": "webpack-dev-server --open --progress --colors",
+    "v:patch": "npm version --no-git-tag-version patch"
+  },
+  "version": "0.1.5"
+}
