@@ -7,11 +7,22 @@ use App\ContentPage;
 
 class ContentPageController extends Controller
 {
+    public function addContent($contentPage, $prefix, $request)
+    {
+        $contentPage->id= $prefix;
+        $contentPage->assets= $request->input('gjs-assets');
+        $contentPage->css= $request->input('gjs-css');
+        $contentPage->styles= $request->input('gjs-styles');
+        $contentPage->html= $request->input('gjs-html');
+        $contentPage->components= $request->input('gjs-components');
+
+        $contentPage->save();
+    }
+
     public function store(Request $request)
     {
         //prefix = what is contained in main div (ID) -> what makes it a unique identifier
-        $properties = array_keys($request->all());
-        $prefix = explode('-', $properties[0])[0];
+        $prefix = $request->route('id');
 
         $entry = ContentPage::where('id', '=', $prefix)->first();
         if ($entry === null) {
@@ -20,14 +31,7 @@ class ContentPageController extends Controller
         } else {
             $contentPage= $entry;
         }
-        $contentPage->id= $prefix;
-        $contentPage->assets= $request->input($prefix . '-' . 'assets');
-        $contentPage->css= $request->input($prefix . '-' . 'css');
-        $contentPage->styles= $request->input($prefix . '-' . 'styles');
-        $contentPage->html= $request->input($prefix . '-' . 'html');
-        $contentPage->components= $request->input($prefix . '-' . 'components');
-        $contentPage->save();
-
+        Self::addContent($contentPage, $prefix, $request);
         return redirect()->back();
     }
 
@@ -35,13 +39,17 @@ class ContentPageController extends Controller
     {
         $prefix = $request->route('id');
         $contentPage = ContentPage::whereId($prefix)->first();
+        if ($contentPage === null) {
+            $contentPage = new ContentPage();
+            Self::addContent($contentPage, $prefix, $request);
+        }
         $labels = ['assets', 'css', 'styles', 'html', 'components', ];
         $json = [
-            $prefix . '-assets' =>  $contentPage->getAttribute('assets'),
-            $prefix . '-css' =>  $contentPage->getAttribute('css'),
-            $prefix . '-styles' =>  $contentPage->getAttribute('styles'),
-            $prefix . '-html' =>  $contentPage->getAttribute('html'),
-            $prefix . '-components' =>  $contentPage->getAttribute('components')
+            'gjs-assets' =>  $contentPage->getAttribute('assets'),
+            'gjs-css' =>  $contentPage->getAttribute('css'),
+            'gjs-styles' =>  $contentPage->getAttribute('styles'),
+            'gjs-html' =>  $contentPage->getAttribute('html'),
+            'gjs-components' =>  $contentPage->getAttribute('components')
         ];
 
         header('Content-Type: application/json');

@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index-simple');
 });
 
-Route::post('/content/store', 'ContentPageController@store')->name('content.store');
+Route::post('/content/store/{id}', 'ContentPageController@store')->name('content.store');
 Route::get('/content/load/{id}', 'ContentPageController@load')->name('content.load');

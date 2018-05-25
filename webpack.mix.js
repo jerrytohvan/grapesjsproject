@@ -41,8 +41,10 @@ mix.js('resources/assets/js/app.js', 'public/js').version()
 
 
 //aviary
-.copy('./node_modules/grapesjs-aviary', 'public/grapesjs-aviary', false);
+.copy('./node_modules/grapesjs-aviary', 'public/grapesjs-aviary', false)
 
+//toast
+.copy('./node_modules/toastr', 'public/toastr', false);
 
 
   mix.autoload({
