@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index-simple');
-});
+Route::get('/', 'SkuController@index')->name('retrieve.all');
+
+
 
 Route::post('/content/store/{id}', 'ContentPageController@store')->name('content.store');
 Route::get('/content/load/{id}', 'ContentPageController@load')->name('content.load');
+Route::get('/retrieve/sku/{id}', 'SkuController@getSkuName')->name('retrieve.sku');
