@@ -43,7 +43,6 @@ class ContentPageController extends Controller
             $contentPage = new ContentPage();
             Self::addContent($contentPage, $prefix, $request);
         }
-        $labels = ['assets', 'css', 'styles', 'html', 'components', ];
         $json = [
             'gjs-assets' =>  $contentPage->getAttribute('assets'),
             'gjs-css' =>  $contentPage->getAttribute('css'),
